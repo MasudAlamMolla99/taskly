@@ -1,0 +1,286 @@
+const employees = [
+  {
+    id: 1,
+    name: "Ravi Sharma",
+    email: "e1@e.com",
+    password: "123",
+    taskCounts: {
+      active: 1,
+      newTask: 1,
+      completed: 1,
+      failed: 1,
+    },
+    tasks: [
+      {
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false,
+        taskTitle: "Submit report",
+        taskDescription: "Prepare and submit the quarterly financial report.",
+        taskDate: "2024-10-22",
+        category: "Finance",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        taskTitle: "Client meeting",
+        taskDescription: "Discuss the project requirements with the client.",
+        taskDate: "2024-10-10",
+        category: "Meeting",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: true,
+        taskTitle: "Code review",
+        taskDescription: "Review the code submitted by the development team.",
+        taskDate: "2024-09-28",
+        category: "Development",
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: "Priya Verma",
+    email: "e2@e.com",
+    password: "123",
+    taskCounts: {
+      active: 2,
+      newTask: 2,
+      completed: 1,
+      failed: 0,
+    },
+    tasks: [
+      {
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false,
+        taskTitle: "Update website content",
+        taskDescription: "Revise the content on the company’s homepage.",
+        taskDate: "2024-10-23",
+        category: "Content",
+      },
+      {
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false,
+        taskTitle: "Database backup",
+        taskDescription: "Perform a full backup of the company's database.",
+        taskDate: "2024-10-20",
+        category: "Maintenance",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        taskTitle: "Social media post",
+        taskDescription:
+          "Publish the new promotional post on all social media channels.",
+        taskDate: "2024-10-15",
+        category: "Marketing",
+      },
+      {
+        active: false,
+        newTask: true,
+        completed: false,
+        failed: false,
+        taskTitle: "Feedback collection",
+        taskDescription:
+          "Collect feedback from the team regarding the new tools.",
+        taskDate: "2024-10-21",
+        category: "HR",
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: "Amit Patel",
+    email: "e3@e.com",
+    password: "123",
+    taskCounts: {
+      active: 2,
+      newTask: 1,
+      completed: 1,
+      failed: 0,
+    },
+    tasks: [
+      {
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false,
+        taskTitle: "Prepare presentation",
+        taskDescription:
+          "Create slides for the upcoming business strategy meeting.",
+        taskDate: "2024-10-25",
+        category: "Presentation",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        taskTitle: "Team training",
+        taskDescription: "Conduct a training session on the new software.",
+        taskDate: "2024-10-12",
+        category: "Training",
+      },
+      {
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false,
+        taskTitle: "Bug fixing",
+        taskDescription: "Fix bugs reported in the latest release.",
+        taskDate: "2024-10-18",
+        category: "Development",
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: "Sunita Gupta",
+    email: "e4@e.com",
+    password: "123",
+    taskCounts: {
+      active: 2,
+      newTask: 1,
+      completed: 1,
+      failed: 1,
+    },
+    tasks: [
+      {
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false,
+        taskTitle: "Customer support",
+        taskDescription: "Respond to customer inquiries about product issues.",
+        taskDate: "2024-10-19",
+        category: "Support",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        taskTitle: "Market research",
+        taskDescription: "Analyze the latest trends in the industry.",
+        taskDate: "2024-10-05",
+        category: "Research",
+      },
+      {
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false,
+        taskTitle: "Order fulfillment",
+        taskDescription: "Ensure all orders are fulfilled before the deadline.",
+        taskDate: "2024-10-20",
+        category: "Logistics",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: true,
+        taskTitle: "Data migration",
+        taskDescription:
+          "Migrate data from the old system to the new platform.",
+        taskDate: "2024-09-25",
+        category: "IT",
+      },
+    ],
+  },
+  {
+    id: 5,
+    name: "Rahul Desai",
+    email: "e5@e.com",
+    password: "123",
+    taskCounts: {
+      active: 3,
+      newTask: 2,
+      completed: 1,
+      failed: 1,
+    },
+    tasks: [
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        taskTitle: "Inventory check",
+        taskDescription: "Verify the inventory levels in the warehouse.",
+        taskDate: "2024-10-08",
+        category: "Inventory",
+      },
+      {
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false,
+        taskTitle: "Draft contract",
+        taskDescription: "Draft a new contract for a major client.",
+        taskDate: "2024-10-22",
+        category: "Legal",
+      },
+      {
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false,
+        taskTitle: "Email campaign",
+        taskDescription: "Launch the new email marcam",
+        taskDate: "2024-10-17",
+        category: "Marketing",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: true,
+        taskTitle: "Security audit",
+        taskDescription: "Conduct a thorough security audit of the network.",
+        taskDate: "2024-09-30",
+        category: "Security",
+      },
+      {
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false,
+        taskTitle: "Event planning",
+        taskDescription: "Plan the details for the upcoming company event.",
+        taskDate: "2024-10-28",
+        category: "Events",
+      },
+    ],
+  },
+];
+
+const admin = [
+  {
+    id: 1,
+
+    email: "admin@me.com",
+    password: "123",
+  },
+];
+
+export const setLocalStorage = () => {
+  localStorage.setItem("employees", JSON.stringify(employees));
+  localStorage.setItem("admin", JSON.stringify(admin));
+};
+setLocalStorage();
+export const getLocalStorage = () => {
+  const employees = JSON.parse(localStorage.getItem("employees"));
+  const admin = JSON.parse(localStorage.getItem("admin"));
+  return { employees, admin };
+};
